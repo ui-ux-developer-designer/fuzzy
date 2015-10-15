@@ -1,0 +1,14 @@
+{
+  "name": "angular-animate",
+  "_cacheHeaders": {
+    "ETag": "\"560c6c4e-6261\"",
+    "Last-Modified": "Wed, 30 Sep 2015 23:12:14 GMT",
+    "Content-Length": "25185",
+    "Content-Type": "application/x-javascript"
+  },
+  "_release": "e-tag:560c6c4e-",
+  "main": "index.js",
+  "_source": "https://code.angularjs.org/1.4.6/angular-animate.min.js",
+  "_target": "*",
+  "_originalSource": "https://code.angularjs.org/1.4.6/angular-animate.min.js"
+}

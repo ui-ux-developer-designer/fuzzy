@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Material Book</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto:400,500,700,400italic'>
+	<link rel="stylesheet" href="./bower_components/angular-material-css/index.css">
+	<link rel="stylesheet" href="assets/app.css">
+	<style type="text/css">
+		[ng\:cloak],
+		[ng-cloak],
+		[data-ng-cloak],
+		[x-ng-cloak],
+		.ng-cloak,
+		.x-ng-cloak {
+			display: none !important;
+		}
+	</style>
+</head>
+
+<body ng-app="bookApp" layout="row" ng-controller="BookController as ul" ng-cloak>
+	<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-md')">
+		<md-toolbar md-scroll-shrink layout="row">
+			<img src="http://materialdesignblog.com/wp-content/uploads/2015/02/logom.png" width="100px" height="100px" alt="MD">
+			<h1>Material Book</h1>
+		</md-toolbar>
+
+		<md-content>
+			<md-subheader class="md-primary">
+				<md-input-container class="md-icon-float">
+					<label>Search a book</label>
+					<md-icon md-svg-icon="search"></md-icon>
+					<input ng-model="keyword" type="text">
+				</md-input-container>
+			</md-subheader>
+			<md-list>
+				<md-list-item ng-repeat="it in ul.books | search:keyword">
+					<md-button ng-click="ul.selectBook(it)" ng-class="{'selected' : it === ul.selected }">
+						<img ng-src="assets/img/{{it.genre}}.jpg" class="cover">
+						<span ng-bind-html="it.title | highlight:keyword">{{it.title}}</span>
+					</md-button>
+				</md-list-item>
+			</md-list>
+		</md-content>
+	</md-sidenav>
+	<main flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+		<md-progress-linear md-mode="{{ul.determinateValue}}"></md-progress-linear>
+		<md-button class="md-fab md-primary" hide-gt-md ng-click="ul.toggleList()" aria-label="Show Book List">
+			<md-icon md-svg-icon="menu"></md-icon>
+		</md-button>
+		<md-content flex id="content">
+			<img ng-src="assets/img/{{ul.selected.genre}}.jpg" class="cover">
+			<h2 ng-bind-html="ul.selected.title | highlight:keyword">{{ul.selected.title}}</h2>
+			<p>{{ul.selected.description}}</p>
+			<h6>Genre: {{ul.selected.genre}}</h6>
+			<small>Price: {{ul.selected.price}} SEK</small>
+			<footer>
+				<small>{{ul.selected.author}}</small>
+				<date>{{ul.selected.publish_date}}</date>
+			</footer>
+			<md-button class="shop" md-no-ink ng-click="ul.showShopOptions($event)" aria-label="Shop Book">
+				<md-tooltip>Shop {{ul.selected.title}}</md-tooltip>
+				<md-icon md-svg-icon="more"></md-icon>
+			</md-button>
+		</md-content>
+	</main>
+	<script src="./bower_components/angular/index.js"></script>
+	<script src="./bower_components/angular-animate/index.js"></script>
+	<script src="./bower_components/angular-aria/index.js"></script>
+	<script src="./bower_components/angular-material/index.js"></script>
+	<script src="./bower_components/fuse.js/index.js"></script>
+	<script src="./bower_components/x2js/index.js"></script>
+	<script src="./src/books/Books.js"></script>
+	<script src="./src/books/BookController.js"></script>
+	<script src="./src/books/BookService.js"></script>
+	<script type="text/javascript">
+		angular
+			.module('bookApp', ['ngMaterial', 'books'])
+			.config(function($mdThemingProvider, $mdIconProvider){
+				$mdIconProvider
+					.icon("explore"    , "./assets/svg/explore.svg"     , 24)
+					.icon("info"       , "./assets/svg/info.svg"        , 24)
+					.icon("more"       , "./assets/svg/more.svg"        , 24)
+					.icon("menu"       , "./assets/svg/menu.svg"        , 24)
+					.icon("search"     , "./assets/svg/search.svg"      , 24)
+					.icon("share"      , "./assets/svg/share.svg"       , 24)
+					.icon("google", "./assets/svg/google.svg" , 512)
+					.icon("amazon"   , "./assets/svg/amazon.svg"    , 512)
+					.icon("ebay"    , "./assets/svg/ebay.svg"     , 512)
+					.icon("w3"      , "./assets/svg/w3.svg"       , 512);
+				$mdThemingProvider.theme('default')
+					.primaryPalette('blue')
+					.accentPalette('red');
+			});
+	</script>
+</body>
+
+</html>

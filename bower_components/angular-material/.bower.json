@@ -1,0 +1,13 @@
+{
+  "name": "angular-material",
+  "_cacheHeaders": {
+    "ETag": "\"d2e3d97e149c411c4d4af3a08de49d544b493c1d\"",
+    "Content-Length": "276222",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:d2e3d97e1",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/angular/bower-material/master/angular-material.min.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/angular/bower-material/master/angular-material.min.js"
+}

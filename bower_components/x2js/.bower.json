@@ -1,0 +1,13 @@
+{
+  "name": "x2js",
+  "_cacheHeaders": {
+    "ETag": "\"24ef47624cf39e48a7dd4119fac5ed2b14716885\"",
+    "Content-Length": "7755",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:24ef47624",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/abdmob/x2js/master/xml2json.min.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/abdmob/x2js/master/xml2json.min.js"
+}

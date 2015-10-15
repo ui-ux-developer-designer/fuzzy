@@ -1,0 +1,13 @@
+{
+  "name": "fuse.js",
+  "_cacheHeaders": {
+    "ETag": "\"6bb47e030bf158352dad527842cf490d3a13840d\"",
+    "Content-Length": "4571",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:6bb47e030",
+  "main": "index.js",
+  "_source": "https://raw.githubusercontent.com/krisk/fuse/master/src/fuse.min.js",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/krisk/fuse/master/src/fuse.min.js"
+}

@@ -1,0 +1,13 @@
+{
+  "name": "angular-material-css",
+  "_cacheHeaders": {
+    "ETag": "\"18564cb03883c85c5ddc8189f6adcbf331b21b54\"",
+    "Content-Length": "297582",
+    "Content-Type": "text/plain; charset=utf-8"
+  },
+  "_release": "e-tag:18564cb03",
+  "main": "index.css",
+  "_source": "https://raw.githubusercontent.com/angular/bower-material/master/angular-material.css",
+  "_target": "*",
+  "_originalSource": "https://raw.githubusercontent.com/angular/bower-material/master/angular-material.css"
+}

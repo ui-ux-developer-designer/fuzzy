@@ -1,0 +1,14 @@
+{
+  "name": "angular",
+  "_cacheHeaders": {
+    "ETag": "\"560c7a55-23e36\"",
+    "Last-Modified": "Thu, 01 Oct 2015 00:12:05 GMT",
+    "Content-Length": "146998",
+    "Content-Type": "application/x-javascript"
+  },
+  "_release": "e-tag:560c7a55-",
+  "main": "index.js",
+  "_source": "https://code.angularjs.org/1.4.6/angular.min.js",
+  "_target": "*",
+  "_originalSource": "https://code.angularjs.org/1.4.6/angular.min.js"
+}

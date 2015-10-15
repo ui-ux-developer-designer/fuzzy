@@ -1,0 +1,24 @@
+{
+	"name": "material-book",
+	"description": "An experimental project on AngularJS Material",
+	"version": "0.0.0",
+	"homepage": "https://github.com/ui-ux-developer-designer/fuzzy",
+	"license": "MIT",
+	"private": true,
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	],
+	"dependencies": {
+		"x2js": "https://raw.githubusercontent.com/abdmob/x2js/master/xml2json.min.js",
+		"angular": "https://code.angularjs.org/1.4.6/angular.min.js",
+		"angular-animate": "https://code.angularjs.org/1.4.6/angular-animate.min.js",
+		"angular-aria": "https://code.angularjs.org/1.4.6/angular-aria.min.js",
+		"angular-material": "https://raw.githubusercontent.com/angular/bower-material/master/angular-material.min.js",
+		"angular-material-css": "https://raw.githubusercontent.com/angular/bower-material/master/angular-material.css",
+		"fuse.js": "https://raw.githubusercontent.com/krisk/fuse/master/src/fuse.min.js"
+	}
+}
